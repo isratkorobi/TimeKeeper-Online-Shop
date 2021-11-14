@@ -1,0 +1,23 @@
+/* .add-product form{
+    display:flex;
+    flex-direction: column;
+    
+} */
+
+.add-product h2{
+    color:rgba(1, 68, 1, 0.815);
+    font-size:35px;
+    font-weight:bold;
+}
+.add-product form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.add-product form input, textarea{
+    width:60% !important;
+    margin-bottom: 10px;
+    margin-top:10px;
+    padding: 10px;
+}

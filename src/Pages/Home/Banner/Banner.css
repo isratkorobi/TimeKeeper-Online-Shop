@@ -1,0 +1,28 @@
+.banner {
+    background: #f1f0ff;
+    padding: 100px 0;
+}
+.banner-content{
+    text-align: left;
+}
+.banner-image{
+    width:95%;
+    margin: 0 auto;
+}
+
+.banner-content h1{
+    font-size: 3.8rem;
+}
+
+.btn-custom{
+    background-color: #6851e3;
+    color: #fff !important;
+}
+
+.imgBg{
+    background-color: #6851e3;
+    height: 500px;
+    width: 500px; 
+    border-radius: 50%;
+    line-height: 500px;
+}

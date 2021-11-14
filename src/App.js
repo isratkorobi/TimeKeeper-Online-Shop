@@ -1,23 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import AuthProvider from "./Context/AuthProvider";
+import AddProduct from "./Pages/Home/AddProduct/AddProduct";
+import Appbar from "./Pages/Home/Appbar/Appbar";
+import Dashboard from "./Pages/Home/Dashboard/Dashboard";
+import ExploreProducts from "./Pages/Home/ExploreProducts/ExploreProducts";
+import Home from "./Pages/Home/Home/Home";
+import Login from "./Pages/Home/Login/Login";
+import MyBooking from "./Pages/Home/MyBooking/MyBooking";
+import Order from "./Pages/Home/Order/Order";
+import PrivateRoute from "./Pages/Home/PrivateRoute/PrivateRoute";
+import Register from "./Pages/Home/Register/Register";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+        <BrowserRouter>
+        <Appbar></Appbar>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/addproduct">
+              <AddProduct></AddProduct>
+            </Route>
+            <Route path="/explore">
+              <ExploreProducts></ExploreProducts>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
+            </Route>
+            <PrivateRoute path="/order/:itemId">
+              <Order></Order>
+            </PrivateRoute>
+          </Switch>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

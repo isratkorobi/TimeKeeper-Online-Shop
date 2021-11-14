@@ -1,0 +1,19 @@
+.dashboard a{
+    text-decoration: none;
+    color: #fff;
+}
+.adminbar{
+    background: #001e38;
+    padding: 40px;
+    color: #fff;
+    margin-bottom: 30px;
+    border-radius: 7px;
+}
+.abtn {
+    background-color: #fff;
+    color: #060606;
+    padding: 8px 40px;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+}

@@ -1,0 +1,25 @@
+.ttl{
+    font-weight: 600;
+}
+.rvw{
+    padding: 80px 0;
+}
+.rating{
+    height: 200px;
+    width: 400px;
+    border: 1px solid #ddd;
+    background-color: red;
+}
+
+.review-des{
+    box-shadow: 0 0 20px 2px hsl(0deg 0% 90% / 81%);
+    background: #fff;
+}
+
+.rname{
+    font-weight: 600;
+    font-size: 24px;
+}
+i.fas{
+    color: #FFA500;
+}
