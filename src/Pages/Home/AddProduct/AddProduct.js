@@ -7,7 +7,7 @@ const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/products", data).then((res) => {
+    axios.post("https://serene-cove-68348.herokuapp.com/products", data).then((res) => {
       if(res.data.insertedId){
         alert('added successfully');
         reset();

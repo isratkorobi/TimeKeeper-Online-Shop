@@ -5,7 +5,7 @@ const MyBooking = () => {
     const {user} = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
+        fetch(`https://serene-cove-68348.herokuapp.com/myOrder/${user?.email}`)
         .then((res)=>res.json())
         .then((data)=>console.log(data));
         

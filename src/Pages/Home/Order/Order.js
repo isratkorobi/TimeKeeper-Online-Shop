@@ -13,7 +13,7 @@ const Order = () => {
   const onSubmit = async (data) => {
     console.log(data);
     // data.email = user?.email;
-   await fetch("http://localhost:5000/addOrders", {
+   await fetch("https://serene-cove-68348.herokuapp.com/addOrders", {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -25,7 +25,7 @@ const Order = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleproducts/${itemId}`)
+    fetch(`https://serene-cove-68348.herokuapp.com/singleproducts/${itemId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
